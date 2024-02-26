@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.27" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.27" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.27">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.27" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    <PackageReference Include="Asp.Versioning.Mvc" Version="6.4.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.27" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Exceptions\" />
+    <None Remove="Constants\" />
+    <None Remove="Entities\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Implementations\" />
+    <None Remove="DTOs\" />
+    <None Remove="DTOs\Models\" />
+    <None Remove="DTOs\Payloads\" />
+    <None Remove="DTOs\Payloads\Validators\" />
+    <None Remove="Entities\DataContext\" />
+    <None Remove="Entities\DataContext\EntityConfigurations\" />
+    <None Remove="Interfaces\IRepositories\" />
+    <None Remove="Interfaces\IServices\" />
+    <None Remove="Implementations\Repositories\" />
+    <None Remove="Implementations\Services\" />
+    <None Remove="Controllers\v1\" />
+    <None Remove="CustomMiddlewares\" />
+    <None Remove="Settings\" />
+    <None Remove="Helpers\" />
+    <None Remove="Mappers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Implementations\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="DTOs\Models\" />
+    <Folder Include="DTOs\Payloads\" />
+    <Folder Include="DTOs\Payloads\Validators\" />
+    <Folder Include="Entities\DataContext\" />
+    <Folder Include="Entities\DataContext\EntityConfigurations\" />
+    <Folder Include="Interfaces\IRepositories\" />
+    <Folder Include="Interfaces\IServices\" />
+    <Folder Include="Implementations\Repositories\" />
+    <Folder Include="Implementations\Services\" />
+    <Folder Include="Controllers\v1\" />
+    <Folder Include="CustomMiddlewares\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Mappers\" />
+  </ItemGroup>
+</Project>
