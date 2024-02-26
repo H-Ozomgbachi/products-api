@@ -46,7 +46,7 @@ app.UseSwaggerUI(s =>
 app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");
 app.UseMiddleware<GlobalExceptionMiddleware>();
-app.UseMiddleware<EncryptionMiddleware>();
+app.UseMiddleware<RequestResponseLoggingMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 

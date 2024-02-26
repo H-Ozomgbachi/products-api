@@ -2,13 +2,6 @@
 {
     public class ValidationExceptionFilter : ActionFilterAttribute
     {
-        private readonly ILogger<ValidationExceptionFilter> _logger;
-
-        public ValidationExceptionFilter(ILogger<ValidationExceptionFilter> logger)
-        {
-            _logger = logger;
-        }
-
         public override void OnActionExecuting(ActionExecutingContext context)
         {
             if (!context.ModelState.IsValid)
@@ -20,8 +13,6 @@
                     .SelectMany(v => v.Errors)
                     .Select(v => v.ErrorMessage)
                     .ToList();
-
-                _logger.LogError($"Validation error occurred: {UtilityHelper.Serializer(errors)}");
 
                 var responseObj = new Result<object>
                 {

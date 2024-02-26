@@ -4,13 +4,11 @@
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<GlobalExceptionMiddleware> _logger;
-        private readonly CryptographyHelper cryptography;
 
-        public GlobalExceptionMiddleware(RequestDelegate next, ILogger<GlobalExceptionMiddleware> logger, CryptographyHelper cryptography)
+        public GlobalExceptionMiddleware(RequestDelegate next, ILogger<GlobalExceptionMiddleware> logger)
         {
             _next = next;
             _logger = logger;
-            this.cryptography = cryptography;
         }
 
         public async Task InvokeAsync(HttpContext httpContext)
